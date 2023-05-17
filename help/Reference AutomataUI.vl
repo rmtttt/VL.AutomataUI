@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="QbE246Rv2dRPUO5LGfuMcV">
         <Canvas Id="BLaLjlSy0qUMRckfrr3Xx6" CanvasType="Group">
-          <Node Bounds="467,501,495,19" Id="AVTcSdJC02BPNCQgi6HD5s">
+          <Node Bounds="463,501,504,19" Id="AVTcSdJC02BPNCQgi6HD5s">
             <p:NodeReference LastCategoryFullName="VVVV.AutomataUI" LastDependency="VL.AutomataUI.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="AutomataUI" />
@@ -27,7 +27,7 @@
             <Pin Id="QZnqjdT0gATPjZ8ErDdpmi" Name="Active Transition" Kind="OutputPin" />
             <Pin Id="Jtnvt1qWh8nM4ShpQ0FYz0" Name="Target State" Kind="OutputPin" />
           </Node>
-          <Pad Id="CzkQ6f6TEOpMKrNAW9OLVk" Comment="Hide" Bounds="467,423,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="CzkQ6f6TEOpMKrNAW9OLVk" Comment="Hide" Bounds="465,423,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -36,7 +36,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="CBYfKCbYpcpMOZjJ9qn5Gw" Comment="Show" Bounds="955,434,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="CBYfKCbYpcpMOZjJ9qn5Gw" Comment="Show" Bounds="963,429,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -47,8 +47,8 @@
           </Pad>
           <Pad Id="L6u5wT4tteTMdWTzCYJadR" Comment="Active State" Bounds="630,649,102,41" ShowValueBox="true" isIOBox="true" />
           <Pad Id="VwIdr1JwscYLMrNRwss1Rc" Comment="Active Transition" Bounds="847,604,90,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="Bshst5qEM3nMYP3DnYjEpP" Comment="Target State" Bounds="1017,558,35,15" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="467,1134,95,26" Id="M0FZK8W2IMJMl1ZViS8irk">
+          <Pad Id="Bshst5qEM3nMYP3DnYjEpP" Comment="Target State" Bounds="1017,558,64,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="463,1134,95,26" Id="M0FZK8W2IMJMl1ZViS8irk">
             <p:NodeReference LastCategoryFullName="VL.AutomataUI.AutomataUI" LastDependency="VL.AutomataUI.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="TriggerTransition" />
@@ -58,7 +58,7 @@
             <Pin Id="D3uvrSCizaiPrixoyzKyzP" Name="Output" Kind="OutputPin" />
             <Pin Id="QmTCbeQzjqkOFi9XKZFCtg" Name="Apply" Kind="InputPin" />
           </Node>
-          <Pad Id="Vld6oXCS8CkM6vaVlLxcqe" Comment="Apply" Bounds="593,1070,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="Vld6oXCS8CkM6vaVlLxcqe" Comment="Apply" Bounds="555,1075,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -76,7 +76,7 @@
             <Pin Id="VV2GTN4UY9nMNmX8VmByn6" Name="Output" Kind="StateOutputPin" />
             <Pin Id="D1CvegOwpBBNTEWJ8kIgbp" Name="States" Kind="OutputPin" />
           </Node>
-          <Pad Id="DXAL4XUCESRNYY1kYlLUWa" Comment="States" Bounds="266,684,52,87" ShowValueBox="true" isIOBox="true">
+          <Pad Id="DXAL4XUCESRNYY1kYlLUWa" Comment="States" Bounds="267,675,52,87" ShowValueBox="true" isIOBox="true">
             <p:Value>
               <Item></Item>
             </p:Value>
@@ -91,7 +91,7 @@
             <Pin Id="JoZpKz8BjvGMj9Mp18ftIc" Name="Output" Kind="StateOutputPin" />
             <Pin Id="UEMrrTUauJMNEYgNzAmXx6" Name="Transitions" Kind="OutputPin" />
           </Node>
-          <Pad Id="LESS2CcETyGMrJXm2a7Uau" Comment="Transitions" Bounds="159,810,66,80" ShowValueBox="true" isIOBox="true">
+          <Pad Id="LESS2CcETyGMrJXm2a7Uau" Comment="Transitions" Bounds="159,797,66,80" ShowValueBox="true" isIOBox="true">
             <p:Value>
               <Item></Item>
             </p:Value>
@@ -101,7 +101,7 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="DXZEvLdL4nbMvAKJQjlf3v" Comment="Transition Name" Bounds="524,987,48,15" ShowValueBox="true" isIOBox="true" Value="Start">
+          <Pad Id="DXZEvLdL4nbMvAKJQjlf3v" Comment="Transition Name" Bounds="512,975,48,15" ShowValueBox="true" isIOBox="true" Value="Start">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -157,7 +157,7 @@
             <Pin Id="IsQdkPjRKw1NyIMOGfvtHP" Name="Inverse Output" Kind="OutputPin" />
           </Node>
           <Pad Id="MPY78d2uBrELWppx8IWxOr" Comment="" Bounds="841,890,35,35" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="463,746,85,26" Id="PVbmMxDH9KWO6hCdvfyfYq">
+          <Node Bounds="463,827,85,26" Id="PVbmMxDH9KWO6hCdvfyfYq">
             <p:NodeReference LastCategoryFullName="VL.AutomataUI.AutomataUI" LastDependency="VL.AutomataUI.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="TransitionTime" />
@@ -166,7 +166,7 @@
             <Pin Id="VfGnwlEBbDIQacTRnpmvak" Name="Output" Kind="StateOutputPin" />
             <Pin Id="C4yMtX7QUF4QKrTd0DdDm3" Name="Transition Time" Kind="OutputPin" />
           </Node>
-          <Pad Id="VhF6AfVPlXwQMCiPRBNu7v" Comment="Transition Time" Bounds="549,858,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="VhF6AfVPlXwQMCiPRBNu7v" Comment="Transition Time" Bounds="545,901,35,15" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="PDGwSZsFXD5NzTOhxjBCbi" Name="Create" />
         <Patch Id="HdlJJK32pWQOGZJWAZVVmV" Name="Update" />
@@ -194,8 +194,8 @@
         <Link Id="S4Du00I1lSFMljD1NwKOZq" Ids="Vld6oXCS8CkM6vaVlLxcqe,QmTCbeQzjqkOFi9XKZFCtg" />
         <Link Id="LFzLOWfwTy0QN52tn9mIqo" Ids="IAwjjwWAUBfPxjthx5mxPR,PGggRYkpS0qLalaelKhU2y" />
         <Link Id="ToYDTN2ZA19NmIze0Tf4r4" Ids="C4yMtX7QUF4QKrTd0DdDm3,VhF6AfVPlXwQMCiPRBNu7v" />
-        <Link Id="CeCTennwOpVP3KZPH15fAU" Ids="DXZEvLdL4nbMvAKJQjlf3v,JTsWTUjB9DrN2q6lWRB7dt" />
         <Link Id="PgXzDmZYHP5M9sOdNDacZF" Ids="VfGnwlEBbDIQacTRnpmvak,K8gUSCPzAG1L8fy4RAcfhW" />
+        <Link Id="INyCzC9tuLDLq8gXBbwguN" Ids="DXZEvLdL4nbMvAKJQjlf3v,JTsWTUjB9DrN2q6lWRB7dt" />
       </Patch>
     </Node>
   </Patch>
