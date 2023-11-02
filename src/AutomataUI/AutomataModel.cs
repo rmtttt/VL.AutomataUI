@@ -11,11 +11,18 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using static System.TimeZoneInfo;
+using System.Collections;
 
 namespace AutomataUI
 {
     public class AutomataModel
     {
+        //////UI settings
+        public SKPoint worldOffset;
+        public float worldScale = 1;
+        //////UI settings
+
+
         public List<State> states { get; set; }
         public List<Transition> transitions { get; set; }
 
@@ -26,6 +33,7 @@ namespace AutomataUI
 
         public int elapsedTransitionTime;
         public int elapsedStateTime;
+        
 
         public String output = string.Empty; //output what transition or state is currently active
 
@@ -36,23 +44,7 @@ namespace AutomataUI
         public World world;
         public AutomataModel()
         {
-
-            //states = new List<State>();
-            //transitions = new List<Transition>();
-            //AddState("Init", 0, new SKPoint(0, 0)); // add default state
-            //AddState("Start", 0, new SKPoint(500, 50));
-            //AddTransition("Start", 0, states[0], states[1]);
-
-            //activeState = states[0]; //set activestate to init
-            //targetState = states[0]; // set targetstate also to init
-
-            ////UI background aka desktop element
-            //world = new World()
-            //{
-            //    Bounds = new SKRect(-100000, -100000, 100000, 100000),
-            //    Name = "World"
-            //};
-
+            // init things if you like
         }
         public bool TransitionExists(State startState, State endState)
         {
@@ -160,6 +152,9 @@ namespace AutomataUI
             elapsedStateTime = loadedData.elapsedStateTime;
             elapsedTransitionTime = loadedData.elapsedTransitionTime;
 
+            worldOffset = loadedData.worldOffset;
+            worldScale = loadedData.worldScale;
+
             states.Clear();
             transitions.Clear();
 
@@ -190,8 +185,7 @@ namespace AutomataUI
                 //transition timer
                 if (activeState != targetState && elapsedTransitionTime != 0)
                 {
-                    elapsedTransitionTime -= 1; //counting transition down to 0
-                    //output = activeTransition;
+                    elapsedTransitionTime -= 1; //counting transition down to 0       
                 }
                 else
                 {
@@ -207,7 +201,7 @@ namespace AutomataUI
 
                     if (Redraw != null) Redraw(); //redraw UI
 
-                    Debug.WriteLine("Transition Ends");
+                    // Debug.WriteLine("Transition Ends");
                 }
 
 
@@ -218,34 +212,51 @@ namespace AutomataUI
                 }
             }
 
-
-
-
         }
 
         public void TriggerTransition(String transitionNameIN)
         {
 
-            //find transition and set targettransition
-            foreach (var transition in transitions)
+            if (elapsedStateTime >= activeState.Duration) //enable state locked time
             {
-                if (transition.Name == transitionNameIN &&
-                    transition.StartState.ID == activeState.ID &&
-                    elapsedTransitionTime == 0)
+                //find transition and set targettransition
+                foreach (var transition in transitions)
                 {
+                    if (transition.Name == transitionNameIN &&
+                        transition.StartState.ID == activeState.ID &&
+                        elapsedTransitionTime == 0)
+                    {
 
-                    targetState = transition.EndState;
-                    elapsedTransitionTime = transition.Duration;
-                    elapsedStateTime = 0;
+                        targetState = transition.EndState;
+                        elapsedTransitionTime = transition.Duration;
+                        elapsedStateTime = 0;
 
-                    activeTransition = transition;
-                    //redraw UI
-                    if (Redraw != null) Redraw();
-                    break;
+                        activeTransition = transition;
+                        //redraw UI
+                        if (Redraw != null) Redraw();
+                        break;
 
+                    }
                 }
+            }     
+        }
+
+        public void ForceStatebyName(String name)
+        {
+            State foundState = states.First(s => s.Name == name);
+
+            if (foundState != null)
+            {
+                activeState = foundState;
+                targetState = foundState;
+                elapsedStateTime = 0;
+                elapsedTransitionTime = 0;
+                
+                //redraw UI
+                if (Redraw != null) Redraw();
             }
         }
+
     }
 
     public abstract class UIelement //all UI Elements should be based upon this to make the hittest work
